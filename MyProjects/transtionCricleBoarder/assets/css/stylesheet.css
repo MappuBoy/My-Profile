@@ -1,0 +1,37 @@
+body{
+    background-color: blue;
+}
+body > section {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+body > section::before{
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-radius: 100%;
+    background-color: gray;
+    border: 20px solid white;
+    border-top: 20px solid red;
+    animation: rotate 2s infinite;
+    transform: rotate(43deg);
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(43deg);
+    }
+    to{
+        transform: rotate(403deg);
+    }
+}

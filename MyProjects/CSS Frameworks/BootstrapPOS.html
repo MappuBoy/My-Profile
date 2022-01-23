@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="5" http-equiv="refresh">
+    <meta content="Malith Navod Amarasinghe" name="author">
+    <link href="assets/bootstrap-5.1.3-dist/bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>BootstrapPOS</title>
+    <title>Title</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Point Of Sales System</a>
+        <button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler"
+                data-bs-target="#navbarNavDropdown" data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a aria-current="page" class="nav-link active" href="BootstrapPOS.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Customerpage.html">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Itempage.html">Item</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<section>
+    </div>
+    <div class="row">
+        <div class="col">
+        </div>
+        <div class="col">
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label" for="inputEmail3">Oreder Id</label>
+                <div class="col-sm-6">
+                    <input class="form-control" id="inputEmail3" type="text">
+                </div>
+            </div>
+        </div>
+        <div class="col">
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col ">
+            <h4 align="center" class="align-content-center" text>Customer</h4>
+                <form class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputValueID" placeholder="" value="">
+                    <label for="floatingInputValueID">Input Customer ID</label>
+                </form>
+                <br>
+                 <form class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputValueName" placeholder="" value="">
+                    <label for="floatingInputValueName">Input Name</label>
+                </form>
+                <br>
+                 <form class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputValueAddress" placeholder="" value="">
+                    <label for="floatingInputValueAddress">Input Address</label>
+                </form>
+                <br>
+                 <form class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputValueTpNumber" placeholder="" value="">
+                    <label for="floatingInputValueTpNumber">Input with Tp Number</label>
+                </form>
+                <br>
+                 <form class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputValuePoints" placeholder="" value="">
+                    <label for="floatingInputValuePoints">Input pointse</label>
+                </form>
+            <br>
+            <button type="button" class="btn btn-success justify-content-center">Add to cart</button>
+
+        </div>
+
+        <div class="col">
+
+            <h4 align="center" class="justify-content-center" text>Item</h4>
+            <form class="form-floating">
+                <input type="text" class="form-control" id="floatingInputValueItemID" placeholder="" value="">
+                <label for="floatingInputValueItemID">Input Customer ID</label>
+            </form>
+            <br>
+            <form class="form-floating">
+                <input type="text" class="form-control" id="floatingInputValueItemName" placeholder="" value="">
+                <label for="floatingInputValueItemName">Input Brand</label>
+            </form>
+            <br>
+            <form class="form-floating">
+                <input type="text" class="form-control" id="floatingInputValueItemQtyOnHand" placeholder="" value="">
+                <label for="floatingInputValueItemQtyOnHand">Input Qty On Hand</label>
+            </form>
+            <br>
+            <form class="form-floating">
+                <input type="text" class="form-control" id="floatingInputValueUnitPrice" placeholder="" value="">
+                <label for="floatingInputValueUnitPrice">Input UnitPrice</label>
+            </form>
+            <br>
+            <form class="form-floating">
+                <input type="text" class="form-control" id="floatingInputValueQty" placeholder="" value="">
+                <label for="floatingInputValueQty">Input Qty</label>
+            </form>
+            <br>
+            <button type="button" class="btn btn-warning justify-content-center">Remove from the cart</button>
+        </div>
+        <div class="col-6">
+            <div class="row g-3">
+                <h4 align="center"class="justify-content-center">Order detail</h4>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Total" aria-label="Total">
+                </div>
+
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Paying Amount" aria-label="Paying Amount">
+                </div>
+                <br><br>
+                <div class="row g-3">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Discounts" aria-label="Discounts">
+                    </div>
+
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Balance " aria-label="Balance">
+                    </div>
+            </div>
+                <br>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">ItemId</th>
+                        <th scope="col">Brand</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">I001</th>
+                        <td>Mark</td>
+                        <td>150g</td>
+                        <td>Rs.275.00</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">I002</th>
+                        <td>Jacob</td>
+                        <td>1 pack</td>
+                        <td>Rs.1200.00</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">I003</th>
+                        <td >Larry the Bird</td>
+                        <td>2 liters</td>
+                        <td>Rs.450.00</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">I004</th>
+                        <td >Kandy</td>
+                        <td>2 packs</td>
+                        <td>Rs.450.00</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">I005</th>
+                        <td >Lucas</td>
+                        <td>2 kg</td>
+                        <td>Rs.450.00</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">I006</th>
+                        <td >Lobby</td>
+                        <td>2 packs</td>
+                        <td>Rs.450.00</td>
+                    </tr>
+                    </tbody>
+                </table>
+        </div>
+    </div>
+    </div>
+
+</section>
+<script src="assets/bootstrap-5.1.3-dist/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

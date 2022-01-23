@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    min-height: 0vh;
+    width: 100vw;
+}
+.navbar{
+    background-color: gold;
+    height: 16px;
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar img{
+    width: 100px;
+}
+.navlinks{
+    flex: 1;
+    text-align: right;
+}
+.navlinks ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.navlinks ul li a{
+    color: darkred;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Times New Roman";
+
+}
+.navlinks ul li:after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: darkred;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.navlinks ul li:hover::after{
+    width: 100%;
+    background-color: gold;
+
+}
+
+.coverpage img{
+    width: 100%;
+    background-color: #E5E5E5;
+}
+
+
+
+.aboutme{
+    min-height: 0vh;
+    width: 100vw;
+    background-color: #E5E5E5;
+}
+.aboutme img{
+    display: block;
+    margin: 0 auto 0 auto;
+    padding: 40px;
+    top: 100px;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.textbox{
+    width: 100%;
+    position: relative;
+    top: 30px;
+    text-align: center;
+}
+.textbox h1{
+    font-size: 42px;
+    font-family: "Times New Roman";
+}
+.aboutmetext{
+    margin: 10px 0 40px;
+    font-family: "Times New Roman";
+    font-size: 18px;
+    color: black;
+}
+.downloadbtn{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #A16C6C;
+    padding: 10px 30px;
+    font-size: 14px;
+    background-color: #A16C6C;
+    position: relative;
+    cursor: pointer;
+    margin: 10px auto 30px auto;
+
+}
+.downloadbtn :hover{
+    border: 1px solid gold;
+    background: gold;
+    transition: 5s;
+}
+@media (max-width: 700px){
+    .navlinks ul li{
+        display: block;
+    }
+    .navlinks{
+         position: absolute;
+        background: darkgoldenrod ;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+
+
+    }
+    .textbox h1 {
+        font-size: 20px;
+
+    }
+}
+.skills{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.skilltext{
+    color: black;
+    text-align: center;
+    font-family: "Times New Roman";
+    width: 100%;
+    position: relative;
+    top: 5px
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.skills-column1{
+    flex-basis: 33%;
+    background: darkgoldenrod;
+    border-radius: 10px;
+    margin:0 auto 5% auto;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+.skills-column2{
+    flex-basis: 33%;
+    background: #173201;
+    border-radius: 10px;
+    margin:0 auto 5% auto;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}.skills-column3{
+     flex-basis: 33%;
+     background: #380101;
+     border-radius: 10px;
+     margin:0 auto 5% auto;
+     padding: 20px 12px;
+     box-sizing: border-box;
+ }
+ h3{
+     text-align: center;
+     font-weight: 600;
+     margin: 18px 0;
+     color: white;
+ }
+ p{
+     color: white;
+ }
+ .projects{
+     width: 80%;
+     margin: auto;
+     text-align: center;
+     padding-top: 50px;
+ }
+ .projecttext{
+     color: black;
+     text-align: center;
+     font-family: "Times New Roman";
+     width: 100%;
+     position: relative;
+     top: 5px
+ }
+ @media(max-width: 700px) {
+     .row{
+         flex-direction: column;
+     }
+ }
+.contactme{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    background: #352A55;
+}
+.page{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.h2{
+    color: white;
+}
+.contact{
+    flex-basis: 49%;
+    background: #352A55;
+    border-radius: 10px;
+    margin:0 auto 5% auto;
+    padding: 0 0;
+    box-sizing: border-box;
+}
+.askme{
+    flex-basis: 49%;
+    background: #352A55;
+    border-radius: 10px;
+    margin:0 auto 5% auto;
+    padding: 0 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+

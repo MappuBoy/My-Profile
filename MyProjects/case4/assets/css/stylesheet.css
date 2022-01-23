@@ -1,0 +1,103 @@
+section {
+    width: 100vw;
+    height: 100vh;
+    background: red;
+    border: 1px solid black;
+    position: relative;
+}
+body > section:nth-child(1) {
+    background: white;
+}
+body > section:nth-child(1) > header{
+    width: 100vw;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    right: 0;
+    background: red;
+}
+body > section:nth-child(1) > header > h2{
+    color: white;
+    margin-top: 0;
+    padding-top: 6px;
+    padding-left: 11px;
+}
+body > section:nth-child(1) > h1{
+    font-size: 150px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+body > section:nth-child(2) {
+    background: lightblue;
+}
+body > section:nth-child(2) > header{
+    width: 100vw;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    right: 0;
+    background: blue;
+}
+body > section:nth-child(2) > header > h2{
+    color: white;
+    margin-top: 0;
+    padding-top: 6px;
+    padding-left: 11px;
+}
+body > section:nth-child(2) > h1{
+    font-size: 150px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+body > section:nth-child(3) {
+    background: #564f4f;
+}
+body > section:nth-child(3) > header{
+    width: 100vw;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    right: 0;
+    background: #3b3232;
+}
+body > section:nth-child(3) > header > h2{
+    color: white;
+    margin-top: 0;
+    padding-top: 6px;
+    padding-left: 11px;
+}
+body > section:nth-child(3) > h1{
+    font-size: 150px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+body > section:nth-child(4) {
+    background: red;
+}
+body > section:nth-child(4) > header{
+    width: 100vw;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    right: 0;
+    background: #7a2719;
+}
+body > section:nth-child(4) > header > h2{
+    color: white;
+    margin-top: 0;
+    padding-top: 6px;
+    padding-left: 11px;
+}
+body > section:nth-child(4) > h1{
+    font-size: 150px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

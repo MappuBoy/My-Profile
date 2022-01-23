@@ -1,0 +1,27 @@
+body > div {
+    width: 2px;
+    height: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border: 5px solid red;
+    border-radius: 100%;
+    animation-name: water-drop;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes water-drop {
+    from{
+        height: 1px;
+        width: 1px;
+    }
+    to{
+        height: 300px;
+        width: 300px;
+        opacity: 0;
+    }
+}
