@@ -1,4 +1,4 @@
-*{
+ *{
     margin: 0;
     padding: 0;
 }
@@ -221,14 +221,8 @@
     padding: 0 0;
     box-sizing: border-box;
 }
-.askme{
-    flex-basis: 49%;
-    background: #352A55;
-    border-radius: 10px;
-    margin:0 auto 5% auto;
-    padding: 0 0;
-    box-sizing: border-box;
-}
+
+
 
 
 

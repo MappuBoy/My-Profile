@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Single Page Application</title>
+    <link rel="stylesheet" href="assetes/css/bootstrap.min.css">
+</head>
+<body>
+<!--HEADER SECTION-->
+<header>
+    <!-- Image and text -->
+    <nav class="navbar navbar-light shadow mb-4 rounded" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-1 fw-bold" href="#">
+                <img src="assetes/img/pos-system-icon.jpg" alt="" width="50" height="50" class="d-inline-block align-top">
+                POS System
+            </a>
+            <ul class="nav justify-content-end fs-2">
+                <li id="dashBoard" class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">DashBoard</a>
+                </li>
+                <li id="order" class="nav-item">
+                    <a class="nav-link" href="#">Order</a>
+                </li>
+                <li id="customer" class="nav-item">
+                    <a class="nav-link" href="#">Customer</a>
+                </li>
+                <li id="item" class="nav-item">
+                    <a class="nav-link" href="#">Items</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!--HOME PAGE-->
+<div id="homePage">
+    <main>
+        <section class="container border d-flex justify-content-evenly" style="height: 200px">
+            <div class="border bg-info w-25 d-flex position-relative">
+                <div class="border border-dark">
+                    <img src="assetes/img/icons8-customer-50.png" alt="customer icon">
+                </div>
+                <h3>Customer</h3>
+                <span id="countCustomer" class="fs-1 position-absolute bottom-0 end-0">0</span>
+            </div>
+            <div class="border bg-info w-25 d-flex position-relative">
+                <div class="border">
+                    <img src="assetes/img/icons8-open-box-64.png" alt="items icon">
+                </div>
+                <h3>Items</h3>
+                <span id="countItem" class="fs-1 position-absolute bottom-0 end-0">0</span>
+            </div>
+            <div class="border bg-info w-25 d-flex position-relative">
+                <div class="border">
+                    <img src="assetes/img/icons8-shopping-cart-32.png" alt="cart icon" width="100">
+                </div>
+                <h3>Orders</h3>
+                <span id="countOrders" class="fs-1 position-absolute bottom-0 end-0">0</span>
+            </div>
+        </section>
+    </main>
+</div>
+
+<!--ORDER PAGE-->
+<div id="orderPage">
+    <main>
+        <div class="border border-dark">
+            <div class="row mt-4 mb-4">
+                <div class="col-6 border p-3">
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label fw-bold">Order ID</label>
+                        <input type="text" class="form-control w-50" id="formGroupExampleInput">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label fw-bold">Order Date</label>
+                        <input type="text" class="form-control w-50" id="formGroupExampleInput2">
+                    </div>
+                    <label for="formGroupExampleInput2" class="form-label fw-bold">Customer ID</label>
+                    <select id="custDropDown" class="form-select w-50" aria-label="Default select example">
+
+                    </select>
+                </div>
+                <div class="col-6 border p-3">
+                    <div class="row">
+                        <div class="col">
+                            <label for="formGroupExampleInput2" class="form-label p-1 fw-bold">Item ID</label>
+                            <select id="itemDropDown" class="form-select w-50" aria-label="Default select example">
+
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label for="formGroupExampleInput2" class="form-label p-1 fw-bold">Description</label>
+                            <input id="itemDesc" type="text" class="form-control w-50 p-1" aria-label="Last name">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="formGroupExampleInput2" class="form-label p-1 fw-bold">Pack Size</label>
+                            <input id="itemPackSize" type="text" class="form-control w-50 p-1" aria-label="First name">
+                        </div>
+                        <div class="col">
+                            <label for="formGroupExampleInput2" class="form-label p-1 fw-bold">Qty</label>
+                            <input id="itemQty" type="text" class="form-control w-50" aria-label="Last name">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="formGroupExampleInput2" class="form-label p-1 fw-bold">Unit Price</label>
+                            <input id="itemUniPrice" type="text" class="form-control w-50 p-1" aria-label="First name">
+                        </div>
+                        <div class="col">
+                            <button id="btnAdd" type="button" class="btn btn-primary btn-lg mt-4">ADD</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-8 border">
+                    <table id="tblOrderDetails" class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col">Item ID</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Qty</th>
+                            <th scope="col">Unit Price</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                        </thead>
+                        <tbody id="cartTable">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-4 border">
+                    <p id="amount" class="fs-1 fw-bold">Total: 00.00</p>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label fw-bold">Cash</label>
+                        <input type="email" class="form-control w-50" id="exampleFormControlInput1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput2" class="form-label fw-bold">Balance</label>
+                        <input type="email" class="form-control w-50" id="exampleFormControlInput2">
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="exampleFormControlInput3" class="form-label fw-bold">Discount</label>
+                            <input type="email" class="form-control w-50 mb-3" id="exampleFormControlInput3">
+                        </div>
+                        <div class="col">
+                            <button id="btnSubmit" type="button" class="btn btn-primary btn-lg mt-3">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<!--CUSTOMER PAGE-->
+<div id="customerPage">
+    <main>
+        <div>
+            <div class="row mt-4 mb-4">
+                <div class="col-7 border p-3">
+                    <!--    CUSTOMER FORM-->
+                    <section class="container-xxl border p-2 m-2 bg-info" style="height: 300px">
+                        <div class="row g-3">
+                            <div class="col">
+                                <label class="form-label p-2 fs-5">Customer ID</label>
+                                <input id="txtCustID" type="text" class="form-control" aria-label="First name">
+                                <span class="control-error" id="lblCustID"></span>
+                            </div>
+                            <div class="col">
+                                <label class="form-label p-2 fs-5">Customer Name</label>
+                                <input id="txtCustName" type="text" class="form-control" aria-label="Last name">
+                                <span class="control-error" id="lblCustName"></span>
+                            </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col">
+                                <label class="form-label p-2 fs-5">Address</label>
+                                <input id="txtCustAddress" type="text" class="form-control" aria-label="First name">
+                                <span class="control-error" id="lblCustAddress"></span>
+                            </div>
+                            <div class="col">
+                                <label class="form-label p-2 fs-5">Contact</label>
+                                <input id="txtCustContact" type="text" class="form-control" aria-label="Last name">
+                                <span class="control-error" id="lblCustContact"></span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-5 border p-3">
+                    <!--    BUTTON SECTION-->
+                    <div class="border">
+                        <div>
+                            <div class="input-group mb-3">
+                                <input id="txtSerachID" type="text" class="form-control w-25" placeholder="Customer Id" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <button class="btn btn-outline-secondary" type="button" id="button-addon">Search</button>
+                            </div>
+                        </div>
+                        <button id="btnSave" type="button" class="btn btn-outline-success m-2 rounded-pill fs-5" style="width: 110px">Save</button>
+                        <button id="btnUpdate" type="button" class="btn btn-outline-primary m-2 rounded-pill fs-5" style="width: 110px">Update</button>
+                        <button id="btnDelete" type="button" class="btn btn-outline-danger m-2 rounded-pill fs-5" style="width: 110px">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--    TABLE SECTION-->
+        <section>
+            <div class="table-responsive m-2">
+                <table id="custTable" class="table table-bordered table-striped table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">Customer ID</th>
+                        <th scope="col">Customer Name</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Contact</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tablebody">
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</div>
+
+<!--ITEM PAGE-->
+<div id="itemPage">
+    <main>
+        <div>
+            <div class="row mt-4 mb-4">
+                <div class="col-7 border p-3">
+                    <!--ITEM FORM-->
+                    <section class="container-xxl border p-2 m-2 bg-info" style="height: 300px">
+                        <div class="row g-3">
+                            <div class="col">
+                                <label class="form-label p-2 fs-5">Item Code</label>
+                                <input id="txtItemCode" type="text" class="form-control" aria-label="First name">
+                                <span class="control-error" id="lblItemCode"></span>
+                            </div>
+                            <div class="col">
+                                <label class="form-label p-2 fs-5">Description</label>
+                                <input id="txtItemDesc" type="text" class="form-control" aria-label="Last name">
+                                <span class="control-error" id="lblItemDesc"></span>
+                            </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col">
+                                <label class="form-label p-2 fs-5">Item PackSize</label>
+                                <input id="txtItemPackSize" type="text" class="form-control" aria-label="First name">
+                                <span class="control-error" id="lblItemPackSize"></span>
+                            </div>
+                            <div class="col">
+                                <label class="form-label p-2 fs-5">Qty</label>
+                                <input id="txtItemQty" type="text" class="form-control" aria-label="Last name">
+                                <span class="control-error" id="lblItemQty"></span>
+                            </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col">
+                                <label class="form-label p-2 fs-5">Item Prize</label>
+                                <input id="txtItemPrice" type="text" class="form-control" aria-label="First name">
+                                <span class="control-error" id="lblItemPrice"></span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-5 border p-3">
+                    <!--    BUTTON SECTION-->
+                    <div class="border">
+                        <div>
+                            <div class="input-group mb-3">
+                                <input id="txtSearch" type="text" class="form-control w-25" placeholder="Customer Id" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <button class="btn btn-outline-secondary" type="button" id="btnSearchText">Search</button>
+                            </div>
+                        </div>
+                        <button id="btnItemSave" type="button" class="btn btn-outline-success m-2 rounded-pill fs-5" style="width: 110px">Save</button>
+                        <button id="btnItemUpdate" type="button" class="btn btn-outline-primary m-2 rounded-pill fs-5" style="width: 110px">Update</button>
+                        <button id="btnItemDelete" type="button" class="btn btn-outline-danger m-2 rounded-pill fs-5" style="width: 110px">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">Item ID</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Pack Size</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col">Unit Price</th>
+                    </tr>
+                    </thead>
+                    <tbody id="itemTablebody">
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="assetes/js/bootstrap.js"></script>
+<script src="assetes/jQuery/jquery-3.6.0.min.js"></script>
+<script src="controller/dashBoardControllers.js"></script>
+<script src="controller/customerController.js"></script>
+<script src="controller/itemController.js"></script>
+<script src="controller/OrderController.js"></script>
+<script src="db/database.js"></script>
+<script src="model/Customer.js"></script>
+<script src="model/Item.js"></script>
+<script src="model/Orders.js"></script>
+<script src="model/OrderDetails.js"></script>
+<script>
+
+</script>
+
+</body>
+</html>
